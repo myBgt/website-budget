@@ -1,0 +1,272 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #003366;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: #f2f5f8;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-card {
+    flex: 1;
+    padding: 30px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-button {
+    display: none;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    padding: 5px 10px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .header-content {
+        position: relative;
+    }
+
+    .menu-button {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding-top: 20px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #003366;
+}
